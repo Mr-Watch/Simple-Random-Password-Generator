@@ -4,7 +4,7 @@ import java.lang.ArrayIndexOutOfBoundsException;
 import java.io.*;
 public class Passgen {
     public static void main(String[] args) throws IOException {
-		
+
         Scanner input = new Scanner(System.in);
         char chooise = 'n';
         int array_length = 0;
@@ -46,19 +46,17 @@ public class Passgen {
             } while ((chooise != 'y' && chooise != '1') && (chooise != 'n' && chooise != '0'));
         } while (chooise == 'y' || chooise == '1');
         if (chooise == 'n' || chooise == '0')
-			System.out.println("You can also find the password in the newly created Password.txt file");
-            System.out.println("Thank you for using Passgen v1.0");
-            
-            File Password = new File("Password.txt");
-            PrintWriter output = new PrintWriter(Password);
-            output.println("This is the generated password :");
-            output.println("");
-            output.println(pass_word);
-            output.println("");
-            output.println("Thank you for using Passgen v1.0");
-            output.close();
-            
-            
+            System.out.println("You can also find the password in the newly created Password.txt file");
+        System.out.println("Thank you for using Passgen v1.0");
+
+        File Password = new File("Password.txt");
+        PrintWriter output = new PrintWriter(Password);
+        output.println("This is the generated password :");
+        output.println("");
+        output.println(pass_word);
+        output.println("");
+        output.println("Thank you for using Passgen v1.0");
+        output.close();
+
     }
 }
- 
