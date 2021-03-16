@@ -6,7 +6,7 @@ public class Passgen {
     public static void main(String[] args) throws IOException {
 
         Scanner input = new Scanner(System.in);
-        char chooise = 'n';
+        char choice = 'n';
         int array_length = 0;
         char[] selections = new char[4];
         char[] pass_word;
@@ -40,12 +40,12 @@ public class Passgen {
             System.out.println("Would you like to generate another password ?" + "\n" +
                 "\nYou can answer with 'y / 1' for yes and 'n / 0' for no");
             do {
-                chooise = input.next().charAt(0);
-                if ((chooise != 'y' && chooise != '1') && (chooise != 'n' && chooise != '0'))
+                choice = input.next().charAt(0);
+                if ((choice != 'y' && choice != '1') && (choice != 'n' && choice != '0'))
                     System.out.println("Invalid character");
-            } while ((chooise != 'y' && chooise != '1') && (chooise != 'n' && chooise != '0'));
-        } while (chooise == 'y' || chooise == '1');
-        if (chooise == 'n' || chooise == '0')
+            } while ((choice != 'y' && choice != '1') && (choice != 'n' && choice != '0'));
+        } while (choice == 'y' || choice == '1');
+        if (choice == 'n' || choice == '0')
             System.out.println("You can also find the password in the newly created Password.txt file");
         System.out.println("Thank you for using Passgen v1.0");
 
